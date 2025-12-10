@@ -1,0 +1,86 @@
+1. if we want to represent a group of object as a key value pair then we should go for map interface.
+2. Both key and values are Objects only.
+3. Duplicates keys are not allowed but values can be duplicate
+4. Each key-value pair it is called "One-Entry".
+5.map interface is not child interface of collection hence we can't apply collection interface methods here
+
+map interface defines the following specific methods.
+-----------------------------------------------------
+1. public Object put(Object key, Object value);
+2. void putAll(Map m);
+3. Object get(Object key);
+4. Object remove(Object key);
+It removes the entry associated with specified key and returns the corresponding value.
+5. Boolean containsKey(Object key);
+6. Boolean containsValue(Object value);
+7. Boolean isEmpty();
+8.Int size();
+9. void clear();
+10. Set keyset();
+The set of keys we are getting
+11. Collection values();
+The set of values we are getting.
+12. Set entrySet();
+The set of entryset we are getting.
+
+HashMap
+-------
+1. it was introduced in JDK 1.2 version.
+2. it is an implementation class to map interface.
+3. it is able to store all elements in the form of key-value pairs.
+4. in key-value pairs both key and values are Objects.
+5. in HashMap, keys must be unique. they must not be duplicate and values my be duplicated.
+6. it will not follow key insertion order and sorting order.
+7. it allows heterogeneous elements at both keys side and values side.
+8. it allows only one null elements at key side, but values are able to allow any number of null elements.
+9. it is not a synchronized map.
+10. it allows more than one thread.
+11. it follows parallel execution over the threads.
+12.it will reduce application execution time.
+13. it will increase application performance.
+14. It does not give guarantee for Data consistency.
+15. It is not Thread safe by default.
+16. its internal data structure is hashtable.
+
+HashMap vs LinkedHashMap
+-------------
+1. HashMap is not following insertion order.
+   LinkedHashMap is following insertion Order.
+2. HashMap has HashTable internally as a data Structure.
+   LinkedHashMap has HashTable + LinkedList as internal data structure.
+
+TreeMap
+--------
+1. it was introduced in JDK 1.2 v
+2. it is not a legacy map.
+3. it is a direct implementation class to navigableMap, where navigableMap is a child interface to sortedMap, where sortedMap is a child interface to map interface, that is TreeMap must implement all methods of navigable map, sortedMap, and map.
+4. It manages all elements in the form of key value pairs where both keys and values must be objects.
+5. in key value pairs keys must be unique but values may not be unique can be duplicate.
+6. TreeMap doesn't follow insertion order.
+7. Tree map follow's sorting order.
+8. TreeMap allow's only homogeneous elements at the key side, but allows heterogeneous elements at the values side.
+9. TreeMap doesn't allow null at the keys but it allows any number of null elements at the value side.
+10. it is able to allow only comparable elements at keys side, any type of elements are allowed at values side, if we want to add non comparable elements to the TreeSet then we must use Java.util.Comparator.
+11.it is not a synchronized map.
+12. it allows more than one thread.
+13. it follows parallel execution over the threads.
+14.it will reduce application execution time.
+15. it will increase application performance.
+16. It does not give guarantee for Data consistency.
+17. It is not Thread safe by default.
+18. It's internal data structure is "Red-Block-Tree".
+
+constructors
+-------------
+1. TreeMap t = new TreeMap();--->default sorting order.
+2. TreeMap t = new TreeMap(comparator c);---> customer sorting order.
+
+HashTable
+---------
+1. the underlying data structure is HashTable.
+2.insertion order is not preserved as it is based upon HashCode of the keys.
+3. Heterogeneous Object are allowed both keys and values.
+4. null key or null value is not allowed otherwise we will get NullPointerException.
+5. Duplicate keys are not allowed but values can be duplicated.
+6. every method present inside HashTable is synchronized and hence HashTable Object is Thread-Safe.
+7.
